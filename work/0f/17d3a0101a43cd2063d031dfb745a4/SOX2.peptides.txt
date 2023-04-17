@@ -1,0 +1,1 @@
+/home/purav/Projects/bioinformatics-pipeline-tutorial/work/f6/a0f7b2dce180519edb54f2b22b8d37/SOX2.peptides.txt

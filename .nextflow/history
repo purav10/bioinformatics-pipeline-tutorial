@@ -1,0 +1,5 @@
+2023-04-17 12:48:39	-	deadly_panini	-	84edb4b9a971510f3aa0dd3c42c4adad	fbe3d585-c623-4263-b148-6012075013fb	nextflow run main.nf
+2023-04-17 12:49:30	-	awesome_borg	-	84edb4b9a971510f3aa0dd3c42c4adad	d49f34bd-b615-475f-bf3e-3394411ba305	nextflow run main.nf
+2023-04-17 12:50:28	7s	hopeful_tuckerman	OK	7be483af55196a5cc3a39a61c86736d4	474c3de0-bf37-402a-8587-20b51a20af6e	nextflow run main.nf
+2023-04-17 12:52:44	-	wise_gautier	-	9b95397dbfb35117b2c4c1ff9e88d66f	99214773-1c88-4a4a-b1ad-55d27470e827	nextflow run main.nf -profile cloud
+2023-04-17 12:53:11	9.7s	nasty_coulomb	OK	1eb008e4571defd9ba008ab34b60358b	6c39f141-5cd0-4162-9ce9-c68dd2c9607d	nextflow run main.nf -profile cloud

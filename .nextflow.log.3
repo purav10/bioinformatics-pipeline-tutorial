@@ -1,0 +1,94 @@
+Apr-17 12:49:29.867 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf
+Apr-17 12:49:29.996 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.10.7
+Apr-17 12:49:30.070 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/purav/.nextflow/plugins; core-plugins: nf-amazon@1.11.4,nf-azure@0.14.2,nf-codecommit@0.1.2,nf-console@1.0.4,nf-ga4gh@1.0.4,nf-google@1.4.5,nf-tower@1.5.6,nf-wave@0.5.4
+Apr-17 12:49:30.103 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Apr-17 12:49:30.106 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Apr-17 12:49:30.113 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Apr-17 12:49:30.161 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Apr-17 12:49:30.345 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=1 by probing script field
+Apr-17 12:49:30.367 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [awesome_borg] DSL1 - revision: 84edb4b9a9
+Apr-17 12:49:30.368 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Apr-17 12:49:30.369 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Apr-17 12:49:30.389 [main] DEBUG nextflow.secret.LocalSecretsProvider - Secrets store: /home/purav/.nextflow/secrets/store.json
+Apr-17 12:49:30.406 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@67207d8a] - activable => nextflow.secret.LocalSecretsProvider@67207d8a
+Apr-17 12:49:30.560 [main] DEBUG nextflow.Session - Session UUID: d49f34bd-b615-475f-bf3e-3394411ba305
+Apr-17 12:49:30.561 [main] DEBUG nextflow.Session - Run name: awesome_borg
+Apr-17 12:49:30.561 [main] DEBUG nextflow.Session - Executor pool size: 4
+Apr-17 12:49:30.581 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=12; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Apr-17 12:49:30.655 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 22.10.7 build 5853
+  Created: 18-02-2023 20:32 UTC (19-02-2023 02:02 IDT)
+  System: Linux 5.19.0-38-generic
+  Runtime: Groovy 3.0.13 on OpenJDK 64-Bit Server VM 18.0.2-ea+9-Ubuntu-222.04
+  Encoding: UTF-8 (UTF-8)
+  Process: 123522@dopeshadowz [10.213.4.227]
+  CPUs: 4 - Mem: 7.6 GB (241.6 MB) - Swap: 2 GB (1.8 GB)
+Apr-17 12:49:30.687 [main] DEBUG nextflow.Session - Work-dir: /home/purav/Projects/bioinformatics-pipeline-tutorial/work [ext2/ext3]
+Apr-17 12:49:30.775 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Apr-17 12:49:30.807 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Apr-17 12:49:30.865 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Apr-17 12:49:30.908 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 5; maxThreads: 1000
+Apr-17 12:49:31.089 [main] DEBUG nextflow.Session - Session start
+Apr-17 12:49:31.924 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Apr-17 12:49:31.968 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /home/purav/Projects/bioinformatics-pipeline-tutorial/fasta/; pattern: *.fasta; options: [:]
+Apr-17 12:49:32.100 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-17 12:49:32.100 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-17 12:49:32.121 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Apr-17 12:49:32.130 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=7.6 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+Apr-17 12:49:32.311 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-17 12:49:32.312 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-17 12:49:32.347 [main] DEBUG nextflow.dag.DAG - Before MultipleInputChannelException: entering=DAG$ChannelHandler(label:input_fasta); name=fasta; vertex=DAG$Vertex(label:countAA, type:PROCESS); edge.to=DAG$Vertex(label:digestProtein, type:PROCESS)
+Apr-17 12:49:32.363 [main] DEBUG nextflow.Session - Session aborted -- Cause: Channel `fasta` has been used twice as an input by process `countAA` and process `digestProtein`
+Apr-17 12:49:32.397 [main] DEBUG nextflow.Session - The following nodes are still active:
+[process] digestProtein
+  status=ACTIVE
+  port 0: (queue) closed; channel: input_fasta
+  port 1: (cntrl) -     ; channel: $
+
+Apr-17 12:49:32.430 [main] ERROR nextflow.cli.Launcher - @unknown
+nextflow.dag.MultipleInputChannelException: Channel `fasta` has been used twice as an input by process `countAA` and process `digestProtein`
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:295)
+	at nextflow.dag.DAG.inbound(DAG.groovy:207)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:194)
+	at nextflow.dag.DAG.addVertex(DAG.groovy:145)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at nextflow.dag.DAG.addProcessNode(DAG.groovy:103)
+	at nextflow.dag.NodeMarker.addProcessNode(NodeMarker.groovy:52)
+	at nextflow.dag.NodeMarker$addProcessNode.call(Unknown Source)
+	at nextflow.processor.TaskProcessor.createOperator(TaskProcessor.groovy:528)
+	at nextflow.processor.TaskProcessor.run(TaskProcessor.groovy:432)
+	at nextflow.processor.TaskProcessor$run.call(Unknown Source)
+	at nextflow.script.BaseScript.process(BaseScript.groovy:115)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:194)
+	at Script_32f1e982.runScript(Script_32f1e982:31)
+	at nextflow.script.BaseScript.runDsl1(BaseScript.groovy:164)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:217)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:230)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:225)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:131)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:354)
+	at nextflow.cli.Launcher.run(Launcher.groovy:487)
+	at nextflow.cli.Launcher.main(Launcher.groovy:646)

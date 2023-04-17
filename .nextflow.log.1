@@ -1,0 +1,47 @@
+Apr-17 12:52:44.272 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile cloud
+Apr-17 12:52:44.398 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.10.7
+Apr-17 12:52:44.447 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/purav/.nextflow/plugins; core-plugins: nf-amazon@1.11.4,nf-azure@0.14.2,nf-codecommit@0.1.2,nf-console@1.0.4,nf-ga4gh@1.0.4,nf-google@1.4.5,nf-tower@1.5.6,nf-wave@0.5.4
+Apr-17 12:52:44.475 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Apr-17 12:52:44.477 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Apr-17 12:52:44.482 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Apr-17 12:52:44.495 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Apr-17 12:52:44.580 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Apr-17 12:52:44.606 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [wise_gautier] DSL2 - revision: 9b95397dbf
+Apr-17 12:52:44.607 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Apr-17 12:52:44.608 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Apr-17 12:52:44.629 [main] DEBUG nextflow.secret.LocalSecretsProvider - Secrets store: /home/purav/.nextflow/secrets/store.json
+Apr-17 12:52:44.646 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@3b152928] - activable => nextflow.secret.LocalSecretsProvider@3b152928
+Apr-17 12:52:44.772 [main] DEBUG nextflow.Session - Session UUID: 99214773-1c88-4a4a-b1ad-55d27470e827
+Apr-17 12:52:44.772 [main] DEBUG nextflow.Session - Run name: wise_gautier
+Apr-17 12:52:44.772 [main] DEBUG nextflow.Session - Executor pool size: 4
+Apr-17 12:52:44.788 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=12; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Apr-17 12:52:44.827 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 22.10.7 build 5853
+  Created: 18-02-2023 20:32 UTC (19-02-2023 02:02 IDT)
+  System: Linux 5.19.0-38-generic
+  Runtime: Groovy 3.0.13 on OpenJDK 64-Bit Server VM 18.0.2-ea+9-Ubuntu-222.04
+  Encoding: UTF-8 (UTF-8)
+  Process: 124325@dopeshadowz [10.213.4.227]
+  CPUs: 4 - Mem: 7.6 GB (155.8 MB) - Swap: 2 GB (1.8 GB)
+Apr-17 12:52:44.857 [main] DEBUG nextflow.Session - Work-dir: /home/purav/Projects/bioinformatics-pipeline-tutorial/work [ext2/ext3]
+Apr-17 12:52:44.950 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Apr-17 12:52:44.976 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Apr-17 12:52:45.022 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Apr-17 12:52:45.049 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 5; maxThreads: 1000
+Apr-17 12:52:45.219 [main] DEBUG nextflow.Session - Session start
+Apr-17 12:52:46.047 [main] DEBUG nextflow.ast.NextflowDSLImpl - Missing name in process definition at line: 99
+Apr-17 12:52:46.048 [main] DEBUG nextflow.ast.NextflowDSLImpl - Missing name in process definition at line: 110
+Apr-17 12:52:46.065 [main] ERROR nextflow.cli.Launcher - Script compilation error
+- file : /home/purav/Projects/bioinformatics-pipeline-tutorial/main.nf
+- cause: Process definition syntax error -- A string identifier must be provided after the `process` keyword @ line 99, column 10.
+   		process {
+            ^
+
+Script compilation error
+- file : /home/purav/Projects/bioinformatics-pipeline-tutorial/main.nf
+- cause: Process definition syntax error -- A string identifier must be provided after the `process` keyword @ line 110, column 8.
+   process {
+          ^
+
+2 errors
+

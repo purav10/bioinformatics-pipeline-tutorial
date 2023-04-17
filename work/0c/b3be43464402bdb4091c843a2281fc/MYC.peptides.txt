@@ -1,0 +1,1 @@
+/home/purav/Projects/bioinformatics-pipeline-tutorial/work/2c/cc0dc3c689c1d5d454c50a9d587c50/MYC.peptides.txt

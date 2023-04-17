@@ -1,0 +1,1 @@
+/home/purav/Projects/bioinformatics-pipeline-tutorial/work/ae/0aae9a863dc969e3b789af73bf6de9/KLF4.peptides.txt

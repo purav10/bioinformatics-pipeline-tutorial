@@ -1,0 +1,102 @@
+Apr-17 12:50:27.798 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf
+Apr-17 12:50:27.904 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.10.7
+Apr-17 12:50:27.953 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/purav/.nextflow/plugins; core-plugins: nf-amazon@1.11.4,nf-azure@0.14.2,nf-codecommit@0.1.2,nf-console@1.0.4,nf-ga4gh@1.0.4,nf-google@1.4.5,nf-tower@1.5.6,nf-wave@0.5.4
+Apr-17 12:50:27.980 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Apr-17 12:50:27.983 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Apr-17 12:50:27.990 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Apr-17 12:50:28.012 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Apr-17 12:50:28.111 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Apr-17 12:50:28.135 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [hopeful_tuckerman] DSL2 - revision: 7be483af55
+Apr-17 12:50:28.136 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Apr-17 12:50:28.137 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Apr-17 12:50:28.156 [main] DEBUG nextflow.secret.LocalSecretsProvider - Secrets store: /home/purav/.nextflow/secrets/store.json
+Apr-17 12:50:28.175 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@7c2a69b4] - activable => nextflow.secret.LocalSecretsProvider@7c2a69b4
+Apr-17 12:50:28.285 [main] DEBUG nextflow.Session - Session UUID: 474c3de0-bf37-402a-8587-20b51a20af6e
+Apr-17 12:50:28.285 [main] DEBUG nextflow.Session - Run name: hopeful_tuckerman
+Apr-17 12:50:28.285 [main] DEBUG nextflow.Session - Executor pool size: 4
+Apr-17 12:50:28.301 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=12; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Apr-17 12:50:28.347 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 22.10.7 build 5853
+  Created: 18-02-2023 20:32 UTC (19-02-2023 02:02 IDT)
+  System: Linux 5.19.0-38-generic
+  Runtime: Groovy 3.0.13 on OpenJDK 64-Bit Server VM 18.0.2-ea+9-Ubuntu-222.04
+  Encoding: UTF-8 (UTF-8)
+  Process: 123766@dopeshadowz [10.213.4.227]
+  CPUs: 4 - Mem: 7.6 GB (175.2 MB) - Swap: 2 GB (1.8 GB)
+Apr-17 12:50:28.376 [main] DEBUG nextflow.Session - Work-dir: /home/purav/Projects/bioinformatics-pipeline-tutorial/work [ext2/ext3]
+Apr-17 12:50:28.449 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Apr-17 12:50:28.476 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Apr-17 12:50:28.512 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Apr-17 12:50:28.527 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 5; maxThreads: 1000
+Apr-17 12:50:28.642 [main] DEBUG nextflow.Session - Session start
+Apr-17 12:50:29.596 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Apr-17 12:50:29.754 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-17 12:50:29.754 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-17 12:50:29.764 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Apr-17 12:50:29.774 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=7.6 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+Apr-17 12:50:29.906 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-17 12:50:29.907 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-17 12:50:29.913 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-17 12:50:29.913 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-17 12:50:29.956 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-17 12:50:29.956 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-17 12:50:29.962 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-17 12:50:29.962 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-17 12:50:29.966 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: digestProtein, archiveResults, plotCount, generateReport, countAA
+Apr-17 12:50:29.966 [main] DEBUG nextflow.Session - Igniting dataflow network (6)
+Apr-17 12:50:29.974 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > digestProtein
+Apr-17 12:50:29.976 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > countAA
+Apr-17 12:50:29.978 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > plotCount
+Apr-17 12:50:29.978 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /home/purav/Projects/bioinformatics-pipeline-tutorial/fasta/; pattern: *.fasta; options: [:]
+Apr-17 12:50:29.979 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > generateReport
+Apr-17 12:50:29.979 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > archiveResults
+Apr-17 12:50:29.980 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Apr-17 12:50:29.980 [main] DEBUG nextflow.Session - Session await
+Apr-17 12:50:30.273 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-17 12:50:30.276 [Task submitter] INFO  nextflow.Session - [95/862680] Submitted process > digestProtein (1)
+Apr-17 12:50:30.321 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-17 12:50:30.323 [Task submitter] INFO  nextflow.Session - [33/3cc775] Submitted process > digestProtein (4)
+Apr-17 12:50:30.333 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-17 12:50:30.335 [Task submitter] INFO  nextflow.Session - [ae/0aae9a] Submitted process > digestProtein (3)
+Apr-17 12:50:30.381 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-17 12:50:30.390 [Task submitter] INFO  nextflow.Session - [f6/a0f7b2] Submitted process > digestProtein (2)
+Apr-17 12:50:30.518 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: digestProtein (1); status: COMPLETED; exit: 0; error: -; workDir: /home/purav/Projects/bioinformatics-pipeline-tutorial/work/95/86268076bedcd2bbdf5e8d60076800]
+Apr-17 12:50:30.639 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: digestProtein (4); status: COMPLETED; exit: 0; error: -; workDir: /home/purav/Projects/bioinformatics-pipeline-tutorial/work/33/3cc775c44e01863c230ce517fc134c]
+Apr-17 12:50:30.671 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: digestProtein (2); status: COMPLETED; exit: 0; error: -; workDir: /home/purav/Projects/bioinformatics-pipeline-tutorial/work/f6/a0f7b2dce180519edb54f2b22b8d37]
+Apr-17 12:50:30.679 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-17 12:50:30.679 [Task submitter] INFO  nextflow.Session - [cd/cd2cbf] Submitted process > countAA (1)
+Apr-17 12:50:30.684 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: digestProtein (3); status: COMPLETED; exit: 0; error: -; workDir: /home/purav/Projects/bioinformatics-pipeline-tutorial/work/ae/0aae9a863dc969e3b789af73bf6de9]
+Apr-17 12:50:30.709 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-17 12:50:30.710 [Task submitter] INFO  nextflow.Session - [12/50983a] Submitted process > countAA (2)
+Apr-17 12:50:30.725 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-17 12:50:30.729 [Task submitter] INFO  nextflow.Session - [4e/a78f7a] Submitted process > countAA (4)
+Apr-17 12:50:30.760 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-17 12:50:30.762 [Task submitter] INFO  nextflow.Session - [0f/17d3a0] Submitted process > countAA (3)
+Apr-17 12:50:30.892 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: countAA (1); status: COMPLETED; exit: 0; error: -; workDir: /home/purav/Projects/bioinformatics-pipeline-tutorial/work/cd/cd2cbf602f5333164efaea40a54d3e]
+Apr-17 12:50:30.913 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-17 12:50:30.915 [Task submitter] INFO  nextflow.Session - [de/1b49ba] Submitted process > plotCount (1)
+Apr-17 12:50:30.952 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: countAA (2); status: COMPLETED; exit: 0; error: -; workDir: /home/purav/Projects/bioinformatics-pipeline-tutorial/work/12/50983a427ceea4ca23fe405efc8716]
+Apr-17 12:50:30.969 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-17 12:50:30.970 [Task submitter] INFO  nextflow.Session - [13/80261e] Submitted process > plotCount (2)
+Apr-17 12:50:30.971 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: countAA (4); status: COMPLETED; exit: 0; error: -; workDir: /home/purav/Projects/bioinformatics-pipeline-tutorial/work/4e/a78f7ae2c4f33e17b9ad6f55ffaa4e]
+Apr-17 12:50:30.983 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-17 12:50:30.991 [Task submitter] INFO  nextflow.Session - [0f/5909cf] Submitted process > plotCount (3)
+Apr-17 12:50:31.061 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: countAA (3); status: COMPLETED; exit: 0; error: -; workDir: /home/purav/Projects/bioinformatics-pipeline-tutorial/work/0f/17d3a0101a43cd2063d031dfb745a4]
+Apr-17 12:50:31.099 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-17 12:50:31.100 [Task submitter] INFO  nextflow.Session - [40/53620b] Submitted process > plotCount (4)
+Apr-17 12:50:34.675 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: plotCount (2); status: COMPLETED; exit: 0; error: -; workDir: /home/purav/Projects/bioinformatics-pipeline-tutorial/work/13/80261e99ab7b5a97c9be31bead3af8]
+Apr-17 12:50:34.686 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-17 12:50:34.688 [Task submitter] INFO  nextflow.Session - [af/d52f63] Submitted process > generateReport
+Apr-17 12:50:34.743 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: plotCount (4); status: COMPLETED; exit: 0; error: -; workDir: /home/purav/Projects/bioinformatics-pipeline-tutorial/work/40/53620b44616bf5f13f36bef91d89f0]
+Apr-17 12:50:34.759 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: plotCount (1); status: COMPLETED; exit: 0; error: -; workDir: /home/purav/Projects/bioinformatics-pipeline-tutorial/work/de/1b49ba54aa15991784f18eb30073b8]
+Apr-17 12:50:34.769 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: plotCount (3); status: COMPLETED; exit: 0; error: -; workDir: /home/purav/Projects/bioinformatics-pipeline-tutorial/work/0f/5909cf38f0bf0cd481948fa6de9582]
+Apr-17 12:50:34.889 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: generateReport; status: COMPLETED; exit: 0; error: -; workDir: /home/purav/Projects/bioinformatics-pipeline-tutorial/work/af/d52f63e250199606a9449733bea0a3]
+Apr-17 12:50:34.904 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-17 12:50:34.905 [Task submitter] INFO  nextflow.Session - [2b/552938] Submitted process > archiveResults
+Apr-17 12:50:34.957 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: archiveResults; status: COMPLETED; exit: 0; error: -; workDir: /home/purav/Projects/bioinformatics-pipeline-tutorial/work/2b/552938719278ac038aabd7860d4b1c]
+Apr-17 12:50:34.960 [main] DEBUG nextflow.Session - Session await > all processes finished
+Apr-17 12:50:34.964 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Apr-17 12:50:34.981 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=14; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=16.4s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=4; peakCpus=4; peakMemory=0; ]
+Apr-17 12:50:35.020 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Apr-17 12:50:35.073 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Apr-17 12:50:35.076 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

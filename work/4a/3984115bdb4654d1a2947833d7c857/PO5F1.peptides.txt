@@ -1,0 +1,1 @@
+/home/purav/Projects/bioinformatics-pipeline-tutorial/work/63/fe1b3e9bf8353e97aa56b57c815c7a/PO5F1.peptides.txt
